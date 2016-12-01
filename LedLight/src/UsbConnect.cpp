@@ -3,6 +3,10 @@
 
 #include "../include/UsbConnect.h"
 
+UsbConnect::UsbConnect() {
+
+}
+
 void UsbConnect::open() {
 
 }
