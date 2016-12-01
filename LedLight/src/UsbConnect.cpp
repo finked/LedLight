@@ -3,6 +3,14 @@
 
 #include "../include/UsbConnect.h"
 
-int main(void) {
+void UsbConnect::open() {
+
+}
+
+void UsbConnect::close() {
+
+}
+
+void UsbConnect::sendData() {
 
 }
