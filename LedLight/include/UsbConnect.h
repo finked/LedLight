@@ -6,13 +6,14 @@
 
 class UsbConnect {
  private:
-     int baudRate;
-     int dataBits;
-     std::string portName;
+     int m_baudRate;
+     int m_dataBits;
+     int m_portName;
+     const char* m_mode;
 
  public:
      UsbConnect();
-     void open();
+     bool open();
      void close();
      void sendData();
 };

@@ -16,4 +16,5 @@ add_executable( ledLight
 src/main.cpp 
 src/UsbConnect.cpp
 src/rs232.c
+src/LedLight.cpp
 )
