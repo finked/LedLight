@@ -1,5 +1,5 @@
-#include <include/FastLED.h>
-#include <include/SimpleTimer.h>
+#include <FastLED.h>
+#include <SimpleTimer.h>
 #define NUM_LEDS 23
 #define DATA_PIN 13
 
