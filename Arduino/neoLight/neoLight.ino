@@ -1,6 +1,6 @@
 #include <FastLED.h>
 #include <SimpleTimer.h>
-#define NUM_LEDS 23
+#define NUM_LEDS 5 
 #define DATA_PIN 13
 
 CRGB leds[NUM_LEDS];
@@ -27,7 +27,7 @@ void setup() {
   
   //TESTS
   FastLED.setDither(0);
-  //FastLED.setBrightness(25);
+  FastLED.setBrightness(25);
   
   // Set starting color of LEDs
   int i;
@@ -36,17 +36,18 @@ void setup() {
     rgbData[i] = 0x50; // r value
     rgbData[i+1] = 0xFF; // g value
     rgbData[i+2] = 0x00; // b value
+    leds[i].setRGB(0x50, 0xFF, 0x00);
   }
-  ledUpdate();
+  /* ledUpdate(); */
   
   // Starte Connection
-  Serial.begin(115200);
+  /* Serial.begin(115200); */
   //Serial.begin(115200,SERIAL_8E1);
   //while (!Serial) {
   //  ; // wait for serial port to connect. Needed for Leonardo only
   //}
   
-  timer.setInterval(50, ledUpdate);
+  /* timer.setInterval(50, ledUpdate); */
 }
 
 void ledUpdate()
