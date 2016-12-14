@@ -13,7 +13,8 @@ class UsbConnect {
 
  public:
      UsbConnect();
+     UsbConnect(int, int, int);
      bool open();
      void close();
-     void sendData();
+     void send(unsigned char *, int);
 };

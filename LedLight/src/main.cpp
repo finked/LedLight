@@ -4,5 +4,14 @@
 #include "../include/UsbConnect.h"
 
 int main() {
-    UsbConnect test;
+    // Create test connection to arduino bord
+    UsbConnect test(115200, 0, 3);
+
+    // Open port
+    test.open();
+
+    // Send testdata
+    // TODO(DF): Fill buffer
+    unsigned char * buf;
+    test.send(buf, 10);
 }
