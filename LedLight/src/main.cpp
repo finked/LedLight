@@ -2,6 +2,7 @@
 // Copyright 2016 Dominik Finke
 
 #include "../include/UsbConnect.h"
+#include "../include/ProfileManager.h"
 
 int main() {
     // Create test connection to arduino bord
@@ -14,4 +15,10 @@ int main() {
     // TODO(DF): Fill buffer
     unsigned char * buf;
     test.send(buf, 10);
+
+    // Later structure
+    // Load profile
+    ProfileManager pm;
+    pm.loadProfile("./profile/monoTest.xml");
+    pm.activateProfile();
 }
